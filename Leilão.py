@@ -39,8 +39,21 @@ class ArvoreBinaria:
         if self.__root == None:
             self.__root= Node(lance)
         else:
-            self.__root = self.__add(self, lance)
+            self.__root = self.__add(self.__root, lance)
 
-    def __add(self, lance)
+    def __add(self, node, lance):
+        if lance <= node.lance:
+           if node.esq != None:
+               node.esq = self.__add(node.esq, lance)
+           else:
+              node.esq = Node(lance)
+        else:
+            if node.dir != None:
+                node.dir = self.__add(node.dir, lance)
+            else:
+                node.dir = Node(lance)
+        return node
+    
+
 
 
