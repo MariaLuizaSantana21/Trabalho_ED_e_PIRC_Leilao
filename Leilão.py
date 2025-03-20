@@ -81,9 +81,21 @@ class ArvoreBinaria:
             
         return node
     
-    #def buscarmaior(self):
+    def buscarmaior(self):
+        if self.estaVazia() == True:
+            raise BinaryTreeException("Não houve lances, não é possível consultar ganhador")
+        else:
+            return self.__ganhador(self.__root)
+
+    def __ganhador(self, node:'Node'):
+        if node.dir == None:
+            return node
+            
+        else:
+            return self.__ganhador(node.dir)
+
+  
         
-    
 
 
 
