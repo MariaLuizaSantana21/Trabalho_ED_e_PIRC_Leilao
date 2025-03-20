@@ -39,12 +39,19 @@ class ArvoreBinaria:
 
     def estaVazia(self) ->bool:
         return self.__root == None
-
+    
+    
     def addLance(self, lance):
+        self.__validarLance(lance)
         if self.__root == None:
             self.__root= Node(lance)
         else:
             self.__root = self.__add(self.__root, lance)
+
+    def __validarLance(self,lance):
+        if lance <= 0:
+            raise BinaryTreeException("Numeros negativos não são permitidos")
+
 
     def __add(self, node: 'Node', lance):
         if lance >= node.lance:
@@ -52,12 +59,17 @@ class ArvoreBinaria:
                self.__add(node.dir, lance)
            else:
               node.dir = Node(lance)
+            
         else:
             if node.esq != None:
                 self.__add(node.esq, lance)
             else:
                 node.esq = Node(lance)
+            
         return node
+    
+    #def buscarmaior(self):
+        
     
 
 
