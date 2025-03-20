@@ -1,5 +1,4 @@
 from Leilão import Node, ArvoreBinaria
-from binary_tree import BinaryTree
 
 arvore = ArvoreBinaria()
 arvore.addLance(50)
@@ -9,7 +8,7 @@ arvore.addLance(40)
 arvore.addLance(60)
    
 
+arvore.traversal(ArvoreBinaria.inorder)
 
 
-
-
+arvore.treeview()
