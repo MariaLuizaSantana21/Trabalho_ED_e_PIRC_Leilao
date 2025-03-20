@@ -2,6 +2,7 @@ from arvorebinaria_exception import BinaryTreeException
 
 #O que falta?
 #Achar o maior lance facilmente para consultar no fim do leilão
+#Balancear arvore(se só houver lances crescentes a arvore ficará terrível de desbalanceada)
 #Permitir que o usuário insira seu nome além do lance e armazenar isso
 #Além de Arvore Binária de Busca vou usar também uma fila encadeada
 # Lembrando: Arvore vai ser usada para achar o ganhador do leilão(maior lance), a fila encadeada servirá para ordenar as entradas de usuários, organizar caso um usuário saia e organizar a vez de quem vai dar o lance.
