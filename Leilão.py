@@ -1,5 +1,17 @@
 from arvorebinaria_exception import BinaryTreeException
 
+#O que falta?
+#Achar o maior lance facilmente para consultar no fim do leilão
+#Permitir que o usuário insira seu nome além do lance e armazenar isso
+#Além de Arvore Binária de Busca vou usar também uma fila encadeada
+# Lembrando: Arvore vai ser usada para achar o ganhador do leilão(maior lance), a fila encadeada servirá para ordenar as entradas de usuários, organizar caso um usuário saia e organizar a vez de quem vai dar o lance.
+#Fazer uma interface melhor para o usuário. (A interface atual no main.py é apenas para testar o código)
+#Implementar a parte de Protocolos de Interconexão de Redes
+#Provavelmente falta alguma coisa a mais mas não me lembro
+
+#Observação: Se não for possível terminar a tempo, continuar projeto mesmo assim para fins de aprendizado
+
+
 class Node:
     def __init__(self, lance = None):
         self.__lance = lance
@@ -79,7 +91,7 @@ class ArvoreBinaria:
     #Código do professor para testar a arvore e ver gráficamente se está funcionando
 
 
-
+   #Essa parte imprime os numeros em ordem
     def traversal(self, order:int = None):
         if order == self.__class__.inorder:
             self.__inorder(self.__root)
@@ -95,7 +107,7 @@ class ArvoreBinaria:
             self.__inorder(node.dir)
 
 
-
+    #Esssa parte imprime a arvore em formato de arvore
     def treeview(self):
         if self.__root is None:
             return
